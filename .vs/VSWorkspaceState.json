@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DS.Graph",
+    "\\DS.Graph\\DS.Graph"
   ],
+  "SelectedNode": "\\DS.Graph\\DS.Graph\\DS.Graph.csproj",
   "PreviewInSolutionExplorer": false
 }
