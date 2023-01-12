@@ -80,8 +80,41 @@ namespace DS.Graph
             {
                 for (int i = 0; i < from.Neighbors.Count; i++)
                 {
-                    
+                    var edge = new Edge<T>()
+                    {
+                        From = from,
+                        To = from.Neighbors[i],
+                        Weight = _isWeighted ? from.Weights[i] : 0
+                    };
+                    edges.Add(edge);
                 }
+            }
+
+            return edges;
+        }
+
+        public Edge<T> this[int from, int to]
+        {
+            get
+            {
+                var nodeFrom = Nodes[from];
+                var nodeTo = Nodes[to];
+
+                var index = nodeFrom.Neighbors.IndexOf(nodeTo);
+
+                if (index >= 0)
+                {
+                    var edge = new Edge<T>()
+                    {
+                        From = nodeFrom,
+                        To = nodeTo,
+                        Weight = _isWeighted ? nodeFrom.Weights[index] : 0
+                    };
+
+                    return edge;
+                }
+
+                return null;
             }
         }
     }
