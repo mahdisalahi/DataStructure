@@ -19,6 +19,18 @@ namespace DS.Graph
 
         public List<Node<T>> Nodes { get; set; }
 
+        private void UpdateIndex()
+        {
+            var i = 0;
+            Nodes.ForEach(x => x.Index = i++);
+        }
 
+        public Node<T> AddNode(T value)
+        {
+            var node = new Node<T>() { Data = value };
+            UpdateIndex();
+            Nodes.Add(node);
+            return node;
+        }
     }
 }
