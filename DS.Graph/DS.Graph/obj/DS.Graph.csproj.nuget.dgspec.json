@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\MyDataStructure\\DataStructure\\DS.Graph\\DS.Graph\\DS.Graph.csproj": {}
+    "C:\\Users\\HP\\source\\repos\\mahdisalahi\\DataStructure\\DS.Graph\\DS.Graph\\DS.Graph.csproj": {}
   },
   "projects": {
-    "G:\\MyDataStructure\\DataStructure\\DS.Graph\\DS.Graph\\DS.Graph.csproj": {
+    "C:\\Users\\HP\\source\\repos\\mahdisalahi\\DataStructure\\DS.Graph\\DS.Graph\\DS.Graph.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\MyDataStructure\\DataStructure\\DS.Graph\\DS.Graph\\DS.Graph.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\source\\repos\\mahdisalahi\\DataStructure\\DS.Graph\\DS.Graph\\DS.Graph.csproj",
         "projectName": "DS.Graph",
-        "projectPath": "G:\\MyDataStructure\\DataStructure\\DS.Graph\\DS.Graph\\DS.Graph.csproj",
+        "projectPath": "C:\\Users\\HP\\source\\repos\\mahdisalahi\\DataStructure\\DS.Graph\\DS.Graph\\DS.Graph.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "G:\\MyDataStructure\\DataStructure\\DS.Graph\\DS.Graph\\obj\\",
+        "outputPath": "C:\\Users\\HP\\source\\repos\\mahdisalahi\\DataStructure\\DS.Graph\\DS.Graph\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
