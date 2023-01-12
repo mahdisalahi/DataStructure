@@ -32,5 +32,68 @@ namespace DS.Graph
             Nodes.Add(node);
             return node;
         }
+
+        public void RemoveNode(Node<T> node)
+        {
+            Nodes.Remove(node);
+
+            UpdateIndex();
+
+            foreach (var item in Nodes)
+            {
+                RemoveEdge(item, node);
+            }
+        }
+
+        public void AddEdge(Node<T> from, Node<T> to, int weight = 0)
+        {
+            from.Neighbors.Add(to);
+            if (_isWeighted)
+            {
+                from.Weights.Add(weight);
+            }
+
+            if (!_isDirected)
+            {
+                to.Neighbors.Add(from);
+                if (_isWeighted)
+                {
+                    to.Weights.Add(weight);
+                }
+            }
+        }
+
+        public void RemoveEdge(Node<T> from, Node<T> to)
+        {
+            var index = from.Neighbors.FindIndex(x => x == to);
+            from.Neighbors.RemoveAt(index);
+            if (_isWeighted)
+            {
+                from.Weights.RemoveAt(index);
+            }
+        }
+
+        public List<Edge<T>> GetEdges()
+        {
+            var edges = new List<Edge<T>>();
+            foreach (var from in Nodes)
+            {
+                for (int i = 0; i < from.Neighbors.Count; i++)
+                {
+                    
+                }
+            }
+        }
+    }
+
+    public class Edge<T>
+    {
+        public Node<T> From { get; set; }
+        public Node<T> To { get; set; }
+        public int Weight { get; set; }
+        public override string ToString()
+        {
+            return $"Node from: {From.Data} --> To: {To.Data}";
+        }
     }
 }
